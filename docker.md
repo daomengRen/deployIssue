@@ -21,18 +21,17 @@ docker -v
 ```
 
 # Linux/Centos离线安装docker（RPM方式）
-1. 下载对应版本的.rpm文件  
+下载对应版本的.rpm文件  
 选择合适的版本https://download.docker.com/linux/centos/  
 x86_64/stable/Packages/目录下  
 下载`containerd.io` `docker-ce` `docker-ce-cli` `docker-ce-rootless-extras` `docker-ce-selinux` `docker-compose-plugin` `docker-scan-plugin`  
-可能需要：`container-selinux` https://pkgs.org/download/container-selinux
+可能需要：`container-selinux` https://pkgs.org/download/container-selinux  
 如果出现相互依赖，则执行`rpm -ivh ***.rmp --nodeps --force`强制安装忽略所有依赖关系
-
-```
-yum install /path/to/package.rpm
-systemctl start docker
-docker -v
-```
+   ```
+    yum install /path/to/package.rpm
+    systemctl start docker
+    docker -v
+   ```
 教程说明https://www.cnblogs.com/aaronthon/p/15772008.html
 
 # Linux/Centos离线安装docker（tgz方式）
