@@ -1,4 +1,5 @@
 # centos7防火墙配置
+
 ```
 systemctl start firewalld
 systemctl status firewalld
