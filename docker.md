@@ -109,32 +109,32 @@ https://docs.docker.com/get-docker/
 ![image](https://user-images.githubusercontent.com/46952617/180118423-dabfe687-7092-401f-8b62-f33e3896fc3a.png)  
 教程说明：https://www.jianshu.com/p/59ddfea43d28  
 3. 下载其他依赖  
-Yum-只下载rpm包不安装
-* 如果只想通过 yum 下载软件的软件包，但是不需要进行安装的话，可以使用 yumdownloader 命令；
+Yum-只下载rpm包不安装  
+    - 如果只想通过 yum 下载软件的软件包，但是不需要进行安装的话，可以使用 yumdownloader 命令；
 yumdownloader 命令在软件包 yum-utils 里面  
-```
-yum install yum-utils -y
+        ```
+        yum install yum-utils -y
 
-常用参数说明：
---destdir 指定下载的软件包存放路径
---resolve 解决依赖关系并下载所需的包
+        常用参数说明：
+        --destdir 指定下载的软件包存放路径
+        --resolve 解决依赖关系并下载所需的包
 
-yumdownloader --destdir=/tmp --resolve httpd
-#会将所下载的所有rpm放置在tmp目录中
-```
-* yum命令的参数有很多，其中就有只是下载而不需要安装的命令，并且也会自动解决依赖；
+        yumdownloader --destdir=/tmp --resolve httpd
+        #会将所下载的所有rpm放置在tmp目录中
+        ```
+    - yum命令的参数有很多，其中就有只是下载而不需要安装的命令，并且也会自动解决依赖；
 通常和 --downloaddir 参数一起使用。
-```
-yum install --downloadonly --downloaddir=/tmp/ vsftpd
-#若已经安装了软件，需要使用reinstall进行下载
-#提示没有--downloadonly选项则需要安装yum-plugin-downloadonly软件包；
-yum install yum-plugin-downloadonly
-```
-* reposync 可以将远端yum仓库里面的包全部下载到本地，构建自己的yum仓库。
-```
-常用参数说明：
--r    指定已经本地已经配置的 yum 仓库的 repo源的名称。
--p    指定下载的路径
+        ```
+        yum install --downloadonly --downloaddir=/tmp/ vsftpd
+        #若已经安装了软件，需要使用reinstall进行下载
+        #提示没有--downloadonly选项则需要安装yum-plugin-downloadonly软件包；
+        yum install yum-plugin-downloadonly
+        ```
+    - reposync 可以将远端yum仓库里面的包全部下载到本地，构建自己的yum仓库。
+        ```
+        常用参数说明：
+        -r    指定已经本地已经配置的 yum 仓库的 repo源的名称。
+        -p    指定下载的路径
 
-reposync -r epel -p /opt/local_epel
-```
+        reposync -r epel -p /opt/local_epel
+        ```
