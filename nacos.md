@@ -14,7 +14,7 @@ db.num=1
 # 1.x版本
 db.url.0=jdbc:mysql://127.0.0.1:13310/nacos?useUnicode=true&characterEncoding=utf-8
 # 2.0.3版本
-#db.url.0=jdbc:mysql://127.0.0.1:13310/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+# db.url.0=jdbc:mysql://127.0.0.1:13310/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
 db.user.0=root
 db.password.0=123456
 ```
