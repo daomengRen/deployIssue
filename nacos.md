@@ -6,7 +6,19 @@ https://github.com/alibaba/nacos/tags
 改成
 `set MODE="standalone"`  
 3. 本地数据库导入conf目录下的nacos-mysql.sql文件
-4. 双击startup.cmd启动  
+4. 在conf目录下application.properties添加数据库连接配置
+注意：nacos不同版本 连接数据库时，url的参数不一致
+```
+spring.datasource.platform=mysql
+db.num=1
+# 1.x版本
+db.url.0=jdbc:mysql://127.0.0.1:13310/nacos?useUnicode=true&characterEncoding=utf-8
+# 2.0.3版本
+#db.url.0=jdbc:mysql://127.0.0.1:13310/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+db.user.0=root
+db.password.0=123456
+```
+5. 双击startup.cmd启动  
 
 # docker安装  
 1. Clone项目  
