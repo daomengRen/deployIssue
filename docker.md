@@ -35,7 +35,8 @@ x86_64/stable/Packages/目录下
 教程说明https://www.cnblogs.com/aaronthon/p/15772008.html
 
 # Linux/Ubuntu离线安装docker（DEB方式）
-`apt-get install lsb-core -y`  
+`apt-get install lsb-core -y`
+`lsb_release -a`  
 `dpkg  --print-architecture`  
 下载对应版本的.deb文件  
 选择合适的版本https://download.docker.com/linux/ubuntu/   
