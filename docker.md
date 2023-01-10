@@ -34,6 +34,21 @@ x86_64/stable/Packages/目录下
    ```
 教程说明https://www.cnblogs.com/aaronthon/p/15772008.html
 
+# Linux/Ubuntu离线安装docker（DEB方式）
+`apt-get install lsb-core -y`  
+`dpkg  --print-architecture`  
+下载对应版本的.deb文件  
+选择合适的版本https://download.docker.com/linux/ubuntu/   
+dists/目录下选择发行版，进入pool/是工具包，stable/是二进制文件包   
+下载`containerd.io` `docker-ce-cli` `docker-ce`   
+按顺序安装 `dpkg -i xxxx.deb`  
+如果出现相互依赖，则执行`sudo dpkg -i *.deb && apt-get -f install`强制安装忽略所有依赖关系
+   ```
+    systemctl start docker
+    docker -v
+   ```
+教程说明https://blog.csdn.net/qq_38066812/article/details/127673911
+
 # Linux/Centos离线安装docker（tgz方式）
 1. 下载对应版本的tgz  
 地址：https://download.docker.com/linux/static/stable/x86_64/
