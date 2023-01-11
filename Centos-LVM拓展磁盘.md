@@ -36,3 +36,10 @@ sda的200G空间并未完整使用，所以我们需要把剩余空间拓展到`
 `partprobe`
 14. lsblk成功  
 ![image](https://user-images.githubusercontent.com/46952617/211730663-b616892e-a41a-4e67-902d-5bd8b722d7a9.png)
+
+**PS:XFS文件系统只支持增大分区空间的情况，不支持减小的情况（切记！！）
+硬要减小的话，只能在减小后将逻辑分区重新通过mkfs.xfs命令重新格式化才能挂载上，这样的话这个逻辑分区上原来的数据就丢失了。如果有重要文件，请注意备份**
+
+## 参考资料
+https://www.cnblogs.com/zhaojiedi1992/p/zhaojiedi_linux_042_lvm.html
+https://vpssj.net/help/1303.htm
